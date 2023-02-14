@@ -1,0 +1,12 @@
+{
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "prettier.singleQuote": true,
+  "editor.formatOnPaste": false, // required
+  "editor.formatOnType": false, // required
+  "editor.formatOnSave": true, // optional
+  "editor.formatOnSaveMode": "file", // required to format on save
+  "files.autoSave": "off", // optional but recommended
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
+}
