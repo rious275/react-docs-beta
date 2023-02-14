@@ -1,15 +1,15 @@
 # JavaScript in JSX with Curly Braces
 
 ## 위치
-1. JSX 태그내에 텍스트에 사용. ex) <p>{text}</p>
-2. 기호 바로 뒤에 오는 속성. ex) src={image}
+1. JSX 태그내에 텍스트에 사용. ex) ```<p>{text}</p>```
+2. 기호 바로 뒤에 오는 속성. ex) ```src={image}```
 
 ## 이중
-객체를 의미함. ex) {{'aa': 1}} 는 {'aa': 1} 객체임
+객체를 의미함. ex) ```{{'aa': 1}}``` 는 ```{'aa': 1}``` 객체임
 
 ## 인라인 스타일 프로퍼티는 카멜케이스
-다시봐도 참..😡
-ex) <ul style={{ backgroundColor: 'black' }}>
+다시봐도 참..😡  
+ex) ```<ul style={{ backgroundColor: 'black' }}>```
 
 ### 과제 1
 ```jsx
