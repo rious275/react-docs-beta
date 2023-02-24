@@ -2,11 +2,11 @@
 
 조건부 JSX 반환
 
-```
+```jsx
 const Item = ({ name, isPacked }) => {
-  if (isPacked) return <li>{name} 트루</li>
-  return <li>{name}</li>
-}
+  if (isPacked) return <li>{name} 트루</li>;
+  return <li>{name}</li>;
+};
 
 // 아무것도 표시하고 싶지 않을때는 null을 반환한다.
 
@@ -20,13 +20,13 @@ const PackingList = () => {
         <Item isPacked={false} name="c" />
       </ul>
     </section>
-  )
-}
+  );
+};
 ```
 
 ### 조건부(삼항) 연산자
 
-```
+```jsx
 if (isPacked) return <li>{name} 트루</li>
 return <li>{name}</li>
 

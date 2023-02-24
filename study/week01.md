@@ -4,29 +4,29 @@
 - 버튼, 아이콘 등의 요소의 단위부터 페이지 단위까지 다양하게 존재한다.
 - 마크업, CSS, Javascript를 재사용 가능하도록 컴포넌트화 할 수 있다.
 
-```
+```jsx
 const Title = () => {
-  return <h1>여기는 타이틀</h1>
-}
+  return <h1>여기는 타이틀</h1>;
+};
 
 const Body = () => {
-  return <p>여기는 바디</p>
-}
+  return <p>여기는 바디</p>;
+};
 ```
 
 - 컴포넌트화 되었다 하더라도 컴포넌트의 내부는 여전히 마크업과 CSS, Javascript로 이루어져 있다.
 - HTML 태그와 마찬가지로 여러 컴포넌트를 조합해 페이지를 디자인할 수 있다.
 - 작성한 컴포넌트들은 재사용 가능하며 이미 만들어진 컴포넌트들이 많을수록 개발 속도가 빨라진다.
 
-```
+```jsx
 const Page = () => {
   return (
     <>
       <Title />
       <Body />
     </>
-  )
-}
+  );
+};
 ```
 
 ### 컴포넌트 내보내기
@@ -38,29 +38,29 @@ const Page = () => {
 
 \*\* 반환문이 한줄이 아닐 때는 아래와 같이 괄호로 묶어야 한다.
 
-```
-1. 반환문이 한 줄일 때,
-return <h1>여기는 타이틀</h1>
+```jsx
+// 1. 반환문이 한 줄일 때,
+return <h1>여기는 타이틀</h1>;
 
-2. 한 줄이 아닐 때,
+// 2. 한 줄이 아닐 때,
 return (
   <div>
     <h1>여기는 타이틀</h1>
   </div>
-)
+);
 ```
 
 ### 부모 컴포넌트와 자식 컴포넌트
 
-```
+```jsx
 const Page = () => {
   return (
     <>
       <Title />
       <Body />
     </>
-  )
-}
+  );
+};
 ```
 
 - 위 예제에서 `Page`는 부모 컴포넌트이고, 그 안에 사용되어진 `Title`과 `Body`는 자식 컴포넌트라 부를 수 있다.
@@ -73,9 +73,9 @@ const Page = () => {
 
 - 작성 후 `export`한 Title, Body 컴포넌트를 다른 곳에 사용하고 싶을 때는 사용할 컴포넌트에서 아래와 같이 가져온다.
 
-```
-import Title from './Title'
-import Body from './Title'
+```jsx
+import Title from "./Title";
+import Body from "./Title";
 
 const Component = () => {
   return (
@@ -83,8 +83,8 @@ const Component = () => {
       <Title />
       <Body />
     </>
-  )
-}
+  );
+};
 ```
 
 ### JSX
@@ -99,24 +99,20 @@ const Component = () => {
 
 - JSX에서 여러 요소를 반환할 땐 반드시 단일 상위 태그로 감싸는 작업이 필요하다.
 
-```
+```jsx
 <div>
   <h1>Hedy Lamarr's Todos</h1>
-  <ul>
-    ...
-  </ul>
+  <ul>...</ul>
 </div>
 ```
 
 - 만약에 div를 사용하지 않으려면 <></>로도 가능하다.
 - <></>는 Fragment라 하며, HTML에 흔적을 남기지 않고 그룹화 할 수 있다.
 
-```
+```jsx
 <>
   <h1>Hedy Lamarr's Todos</h1>
-  <ul>
-    ...
-  </ul>
+  <ul>...</ul>
 </>
 ```
 
@@ -126,8 +122,8 @@ const Component = () => {
 
 - 태그는 항상 클로징이 필요하다.
 
-```
-<img src='' alt='' />
+```jsx
+<img src="" alt="" />
 ```
 
 ---
@@ -146,26 +142,18 @@ const Component = () => {
 - JSX 안에서 자바스크립트를 사용할 때는 아래와 같이 중괄호를 사용한다.
   - 문자열 "avatar"와 변수 `avatar` 구분 유의
 
-```
+```jsx
 export default function Avatar() {
-  const avatar = 'https://i.imgur.com/7vQD0fPs.jpg';
+  const avatar = "https://i.imgur.com/7vQD0fPs.jpg";
 
-  return (
-    <img
-      className="avatar"
-      src={avatar}
-      alt=""
-    />
-  );
+  return <img className="avatar" src={avatar} alt="" />;
 }
 ```
 
-```
+```jsx
 export default function TodoList() {
-  const name = 'Gregorio Y. Zara';
-  return (
-    <h1>{name}'s To Do List</h1>
-  );
+  const name = "Gregorio Y. Zara";
+  return <h1>{name}'s To Do List</h1>;
 }
 ```
 
@@ -173,20 +161,20 @@ export default function TodoList() {
 
 ### React의 인라인 스타일 적용
 
-```
+```jsx
 const person = {
-  name: 'Gregorio Y. Zara',
+  name: "Gregorio Y. Zara",
   theme: {
-    backgroundColor: 'black',
-    color: 'pink'
-  }
+    backgroundColor: "black",
+    color: "pink",
+  },
 };
 
 return (
   <div style={person.theme}>
     <h1>{person.name}'s Todos</h1>
   </div>
-  )
+);
 ```
 
 end

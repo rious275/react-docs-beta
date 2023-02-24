@@ -2,7 +2,7 @@
 
 React에서는 컴포넌트별 변화하는 데이터들을 state라고 부른다.
 
-```
+```jsx
 import { useState } from 'react';
 
 const data = [
@@ -45,7 +45,7 @@ Hook은 기본적으로 컴포넌트의 최상위에서만 호출할 수 있다.
 
 상태값은 각 컴포넌트마다 독립적이다.
 
-```
+```jsx
 const Gallery = () => {
   const [index, setIndex] = useState(0);
 

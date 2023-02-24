@@ -6,29 +6,29 @@
 
 다른 데이터에 영향을 주지 않고, 동일한 입력값이 주어질 때, 항상 동일한 결과를 반환하는 함수
 
-```
+```jsx
 // 순수 함수
 const pure = (number) => {
   return 2 * number;
-}
+};
 
 // 순수하지 않은 함수 (a라는 변수가 바뀌면 값이 달라진다.)
 const a = 2;
 const pure = (number) => {
-  return 2 * number + a
-}
+  return 2 * number + a;
+};
 ```
 
 우리가 작성하는 모든 컴포넌트는 순수 함수이어야 한다.
 
-```
+```jsx
 // 순수하지 않은 함수
 let guest = 0;
 
 const Cup = () => {
   guest = guest + 1;
   return <h2>{guest}</h2>;
-}
+};
 
 /** 메인 컴포넌트 */
 const TeaSet = () => {
@@ -39,16 +39,16 @@ const TeaSet = () => {
       <Cup /> // 6
     </>
   );
-}
+};
 ```
 
 위 예제를 수정해보면,
 
-```
+```jsx
 // 같은 props를 넘겨주면 항상 동일한 값을 반환
 const Cup = ({ guest }) => {
   return <h2>{guest}</h2>;
-}
+};
 
 const TeaSet = () => {
   return (
@@ -58,7 +58,7 @@ const TeaSet = () => {
       <Cup guest={1} /> // 1
     </>
   );
-}
+};
 ```
 
 <br />
@@ -69,10 +69,10 @@ const TeaSet = () => {
 
 위에서 잘못된 예를 살펴봤는데, 컴포넌트가 렌더링하는 동안 기존에 있던 변수를 변경하는 것을 `mutation`라고 부르기도 합니다.
 
-```
+```jsx
 const Cup = ({ guest }) => {
   return <h2>Tea cup for guest #{guest}</h2>;
-}
+};
 
 const TeaGathering = () => {
   let cups = [];
@@ -81,7 +81,7 @@ const TeaGathering = () => {
     cups.push(<Cup key={i} guest={i} />);
   }
   return cups;
-}
+};
 ```
 
 위처럼 컴포넌트 내부에서 변경되는 값들은 괜찮다.
