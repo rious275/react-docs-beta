@@ -154,3 +154,10 @@ updateMyTodos(draft => {
 원래 상태를 변경하는 것이 아니라 Immer에서 제공하는 특수한 초안 객체를 변경하는 것이기 때문입니다. 마찬가지로 초안의 콘텐츠에 push() 및 pop()과 같은 뮤테이션 메서드를 적용할 수 있습니다.
 
 백그라운드에서 Immer는 항상 사용자가 초안에 적용한 변경 사항에 따라 다음 상태를 처음부터 다시 구성합니다. 따라서 상태를 변경하지 않고도 이벤트 핸들러를 매우 간결하게 유지할 수 있습니다.
+
+## 문제
+1번
+https://codesandbox.io/s/3-4-1beon-beoteunnureumyeon-kaunteujeungga-ssq3v4?file=/App.js
+
+2번 https://codesandbox.io/s/2beonmunje-cbis8i?file=/App.js:885-893
+
