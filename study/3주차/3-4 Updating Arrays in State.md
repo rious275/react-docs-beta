@@ -161,3 +161,10 @@ https://codesandbox.io/s/3-4-1beon-beoteunnureumyeon-kaunteujeungga-ssq3v4?file=
 
 2번 https://codesandbox.io/s/2beonmunje-cbis8i?file=/App.js:885-893
 
+3번
+https://codesandbox.io/s/baeyeole-jigjeobjeogin-jeobgeuneul-mageum-tpzesc?file=/App.js
+배열의 직접적인 접근 막고 복사해줌
+
+4번 
+위 예제를 Immer로
+https://codesandbox.io/s/useimmer-607wcl?file=/App.js
