@@ -75,6 +75,15 @@ let obj2 = {
 ## Immer
 중첩 객체는 아래와 같이 처리하자
 ```jsx
+import { useImmer } from 'use-immer';
+const [person, updatePerson] = useImmer({
+  name: 'Niki de Saint Phalle',
+  artwork: {
+    title: 'Blue Nana',
+    city: 'Hamburg',
+    image: 'https://i.imgur.com/Sd1AgUOm.jpg',
+  }
+});
 updatePerson(draft => {
   draft.artwork.city = 'Lagos';
 });
