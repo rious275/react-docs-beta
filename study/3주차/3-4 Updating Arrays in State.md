@@ -123,3 +123,34 @@ export default function ShapeEditor() {
 배열의 순서를 변경하는법
 reverse() 및 sort() 메서드는 원래 배열을 변경하므로 직접 사용할 수 없다.
 배열을 복사해서 그 복사한 배열을 reverse() ,sort()하고 set으로 전달하면 된다.
+
+
+밑 예제는 하나의 컴포넌트에 있는 변수를 두가지로 변환하려 해서 오류가 생김
+https://codesandbox.io/s/46d808?file=/App.js&utm_medium=sandpack
+*배열을 직접적으로 변경하는것은 지양해야 한다?*
+
+```
+setMyList(myList.map(artwork => {
+  if (artwork.id === artworkId) {
+    // 변경 사항이 있는 *새로운* 객체 생성
+    return { ...artwork, seen: nextSeen };
+  } else {
+    // 변경사항 없음
+    아트웍을 반환합니다;
+  }
+});
+```
+https://codesandbox.io/s/trusting-wiles-nej6xu?file=/App.js
+위 예제 버그가 나는이유 = 스프레드 (...)는 주소값을 그대로 가진다 그러므로 직접적으로 변경하면 initialList에 접근하기 때문에 문제가 발생한다.
+스프레드는 최상위에 있는 배열만 얕은 복사를 하기 때문에 밑에있는 깊은 값들의 주소를 복사하지 못한다.
+
+Immer를 사용하면 이제 artwork.seen = nextSeen과 같은 변이도 괜찮습니다:
+```
+updateMyTodos(draft => {
+  const artwork = draft.find(a => a.id === artworkId);
+  artwork.seen = nextSeen;
+});
+```
+원래 상태를 변경하는 것이 아니라 Immer에서 제공하는 특수한 초안 객체를 변경하는 것이기 때문입니다. 마찬가지로 초안의 콘텐츠에 push() 및 pop()과 같은 뮤테이션 메서드를 적용할 수 있습니다.
+
+백그라운드에서 Immer는 항상 사용자가 초안에 적용한 변경 사항에 따라 다음 상태를 처음부터 다시 구성합니다. 따라서 상태를 변경하지 않고도 이벤트 핸들러를 매우 간결하게 유지할 수 있습니다.
