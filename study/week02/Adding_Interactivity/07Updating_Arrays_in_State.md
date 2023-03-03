@@ -7,7 +7,6 @@
 정렬 reverse,sort => 먼저 어레이 복사( 예제 )
 
 ### 배열에 추가
-
 ```jsx
 setArtists([
   ...artists, // 원본 가져온 후
@@ -25,11 +24,9 @@ setArtists([
 filter, map에 대한 사용 설명
 
 ### 배열에서 제거
-
 ```jsx
 setArtists(artists.filter((a) => a.id !== artist.id));
 ```
-
 id가 다른 것들만 모아서 다시 리턴
 
 ### 배열 중간에 삽입
