@@ -156,3 +156,24 @@ export default function Menu() {
 }
 
 ```
+재귀컴포넌트 좀 헷갈렸다.
+
+
+요약
+두 개의 상태 변수가 항상 함께 업데이트되는 경우, 두 변수를 하나로 병합하는 것이 좋습니다.
+"불가능한" 상태를 만들지 않도록 상태 변수를 신중하게 선택하세요.
+업데이트 실수를 줄일 수 있는 방식으로 상태를 구성하세요.
+상태를 동기화할 필요가 없도록 중복 및 중복 상태를 피하세요.
+특별히 업데이트를 방지하려는 경우가 아니라면 소품을 상태에 넣지 마세요.
+선택과 같은 UI 패턴의 경우 개체 자체 대신 ID 또는 인덱스를 상태로 유지하세요.
+깊게 중첩된 상태를 업데이트하는 것이 복잡하다면 플랫화하세요.요약
+
+1번 색 조정 시계
+https://codesandbox.io/s/sigye-saegjojeong-jzykmr?file=/Clock.js
+2번 
+장바구니
+https://codesandbox.io/s/cekeudoengeo-jiugi-lto5pg?file=/PackingList.js
+3번 클릭하이라이트
+https://codesandbox.io/s/keulrighamyeon-hairaiteu-kntjbj?file=/Letter.js:357-366
+4번 문제 보류
+https://codesandbox.io/s/xxrgl4?file=/App.js&utm_medium=sandpack
