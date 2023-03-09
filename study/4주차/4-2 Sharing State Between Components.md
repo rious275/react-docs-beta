@@ -65,4 +65,4 @@ const [activeIndex, setActiveIndex] = useState(0); //activeIndex가 0이면 첫 
 1번 문제 
 https://codesandbox.io/s/inpute-textgabs-ilci-p5vepn?file=/App.js
 2번 문제
-https://codesandbox.io/s/elastic-brook-uuh4vv?file=/data.js:35-40
+https://codesandbox.io/s/elastic-brook-uuh4vv?file=/App.js
