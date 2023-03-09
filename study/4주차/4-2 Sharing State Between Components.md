@@ -43,4 +43,26 @@ export default function Accordion() {
   );
 }
 ```
-### 하위 컴포넌트에서의 상태제거
+### 부모에서 하위컴포넌트 제어
+
+1 하위 컴포넌트에서의 상태제거 후 props 만들기
+2 공통된 부모에서 props전달
+3 공통된 부모에 상태추가
+```
+const [activeIndex, setActiveIndex] = useState(0); //activeIndex가 0이면 첫 번째 패널이 활성화되고, 1이면 두 번째 패널이 활성화된다.
+
+```
+각각의 컴포넌트는 단인 소스를 갖는다? 
+상태마다 고유한 값을 가진다.
+
+요약
+
+1. 두 컴포넌트를 조정하고 싶을 때는 상태를 공통 부모로 이동합니다.
+2. 그런 다음 공통 부모로부터 프로퍼티를 통해 정보를 전달합니다.
+3. 마지막으로 이벤트 핸들러를 전달해 자식들이 부모의 상태를 변경할 수 있도록 합니다.
+4. 컴포넌트를 "제어되는"(프로퍼티에 의해 구동되는) 또는 "제어되지 않는"(상태에 의해 구동되는) 것으로 간주하는 것이 유용합니다.
+
+1번 문제 
+https://codesandbox.io/s/inpute-textgabs-ilci-p5vepn?file=/App.js
+2번 문제
+https://codesandbox.io/s/elastic-brook-uuh4vv?file=/data.js:35-40
