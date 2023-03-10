@@ -150,11 +150,11 @@ userReducer 직접구현
 import {useState} from 'react';
 
 export const useReducer = (reducer, initialState) => {
+//reducer 에 messengerReducer 받아옴
   const [state, setState] = useState(initialState);
 
   const dispatch = (action) => {
-    const nextState = reducer(state, action);
-    setState(nextState);
+    setState((s) => reducer(s, action));
   }
 
   return [state, dispatch];
