@@ -91,3 +91,30 @@ export default function TaskApp() {
   );
 }
 ```
+
+아래처럼 함수를 전달하여(useXXX로 작성하면 사용자 정의 hook으로 인식한다)
+```
+export function useTasks() {
+  return useContext(TasksContext);
+}
+
+export function useTasksDispatch() {
+  return useContext(TasksDispatchContext);
+}
+```
+함수형식으로 쓸 수 도 있다. (더깔끔하다.)
+```
+const tasks = useTasks();
+const dispatch = useTasksDispatch();
+```
+
+요약
+1. Reducer와 Context를 결합하면 모든 컴포넌트가 그 위에 있는 상태를 읽고 업데이트할 수 있습니다.
+2. 아래 컴포넌트에 state와 dispatch 함수를 제공할 수 있습니다:
+  1) state와 dispatch 함수에 대한 컨텍스트 두 개를 생성합니다.
+  2) Reducer를 사용하는 컴포넌트에서 두 컨텍스트를 모두 제공합니다.
+  3) Context를 읽어야 하는 컴포넌트에서 두 Context 중 하나를 사용합니다.
+3. 모든 배선을 하나의 파일로 이동하여 컴포넌트를 더욱 깔끔하게 정리할 수 있습니다.
+  1) Context를 제공하는 TasksProvider와 같은 컴포넌트를 내보낼 수 있습니다.
+  2) 또한, useTask나 useTaskDispatch 같은 사용자 정의 훅을 내보내서 읽을 수도 있습니다.
+4. 앱에서 이와 같은 Context Reducer 쌍을 여러 개 가질 수 있습니다.
