@@ -68,5 +68,5 @@ ref는 렌더링중에 사용하면 안된다. 어느 순서에 변경 될지 �
 1문 https://codesandbox.io/s/current-sujeong-sjxi2u?file=/App.js:364-368
 2문  https://codesandbox.io/s/statejeondal-c93h94?file=/App.js
 3문 https://codesandbox.io/s/cleartimeoute-refneohgi-q1kky0?file=/App.js
-4문 https://codesandbox.io/s/broken-sun-m1ijh5?file=/App.js
+4문 https://codesandbox.io/s/broken-sun-m1ijh5?file=/App.js  답을보니 3초뒤에 나오는게 아니라 아닌듯
 
