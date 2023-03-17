@@ -25,5 +25,12 @@
 2. <div ref={myRef}>를 전달하여 React에 DOM 노드를 myRef.current에 넣도록 지시합니다.
 3. 보통 포커스 맞추기, 스크롤, DOM 엘리먼트 측정과 같은 비파괴적인 동작에 ref를 사용합니다.
 4. 컴포넌트는 기본적으로 DOM 노드를 노출하지 않습니다. forwardRef를 사용하고 두 번째 ref 인수를 특정 노드에 전달하여 DOM 노드를 노출하도록 선택할 수 있습니다.
+  (forwardRef((props, ref))  <=이런식으로 2번째 인수에ref전달
 5. React가 관리하는 DOM 노드를 변경하지 마세요.
 6. React가 관리하는 DOM 노드를 수정해야 하는 경우 React가 업데이트할 이유가 없는 부분만 수정하세요.
+
+1문 https://codesandbox.io/s/epic-minsky-ltkpp1?file=/App.js:303-307 답봄
+2문 https://codesandbox.io/s/pokeoseu-hagi-zorc4q 포커스 하기
+3문 못함
+4문 https://codesandbox.io/s/6sh42h?file=/App.js:131-144&utm_medium=sandpack
+                                 
