@@ -65,3 +65,8 @@ ref는 렌더링중에 사용하면 안된다. 어느 순서에 변경 될지 �
 5. state와 달리 ref의 현재 값을 설정해도 리렌더링이 트리거되지 않습니다.
 6. 렌더링 중에는 ref.current를 읽거나 쓰지 마세요. 이렇게 하면 컴포넌트를 예측하기 어렵습니다.
 
+1문 https://codesandbox.io/s/current-sujeong-sjxi2u?file=/App.js:364-368
+2문  https://codesandbox.io/s/statejeondal-c93h94?file=/App.js
+3문 https://codesandbox.io/s/cleartimeoute-refneohgi-q1kky0?file=/App.js
+4문 https://codesandbox.io/s/broken-sun-m1ijh5?file=/App.js
+
