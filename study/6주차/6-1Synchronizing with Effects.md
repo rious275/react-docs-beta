@@ -145,4 +145,6 @@ export default function App() {
 8. 만약 이펙트를 다시 마운트하는 과정에서 이펙트가 깨진다면, 정리 함수를 구현해야 합니다.
 9. React는 다음 번에 이펙트가 실행되기 전과 마운트 해제 중에 정리 함수를 호출합니다.
 
-Translated with www.DeepL.com/Translator (free version)
+
+
+1번https://codesandbox.io/s/pokeoseuhagi-wp41oc?file=/MyInput.js
