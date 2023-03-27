@@ -62,6 +62,7 @@ const nextRound = round + 1 O
 
 상태(state)변경은 Effect 사용이 지양되는 경우가 많은듯?
 
+effect에서 props 항목변경으로 인한 상태조정은 좋지않다.
 
 ## 오래된 응답 무시하기
 ```
