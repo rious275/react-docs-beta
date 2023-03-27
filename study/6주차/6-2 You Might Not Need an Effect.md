@@ -96,3 +96,7 @@ function SearchResults({ query }) {
 여러 컴포넌트의 상태를 업데이트해야 하는 경우 단일 이벤트 중에 수행하는 것이 좋습니다.
 여러 컴포넌트의 상태 변수를 동기화하려고 할 때마다 상태 리프팅을 고려하세요.
 Effects로 데이터를 가져올 수 있지만 경쟁 조건을 피하기 위해 정리를 구현해야 합니다.
+
+1문2문 뭔소린지?
+3문https://codesandbox.io/s/ipegteu-ansseugi-l4ofe3
+4문??
