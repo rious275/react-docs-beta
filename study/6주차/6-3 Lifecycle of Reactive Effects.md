@@ -105,3 +105,10 @@ function ChatRoom() {
 반응형 값은 시간이 지남에 따라 변경될 수 있으므로 이펙트를 다시 동기화해야 합니다.
 인터프리터는 이펙트 내부에서 사용된 모든 반응형 값이 종속성으로 지정되었는지 확인합니다.
 린터에 의해 플래그가 지정된 모든 오류는 합법적인 오류입니다. 규칙을 위반하지 않도록 코드를 수정할 수 있는 방법은 항상 있습니다.
+
+
+1.https://codesandbox.io/s/jongsogseonggabs-hqeb6p 종속성
+2.https://codesandbox.io/s/pointeo-mubeu-if-47njr4 포인터 무브
+3.https://codesandbox.io/s/mweoji-ddoggateungeoaninga-w13m95
+4.https://codesandbox.io/s/jongsogseongcuga-jfo9yx
+5.귀찮.
